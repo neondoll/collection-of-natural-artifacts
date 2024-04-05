@@ -1,0 +1,13 @@
+$background-shade: #0b1919;
+$green-active-click: #688b05;
+$green-focus: #83a440;
+$grey: #899d9d;
+$primary-green: #bae249;
+
+:root {
+  --background-shade: #{$background-shade};
+  --green-active-click: #{$green-active-click};
+  --green-focus: #{$green-focus};
+  --grey: #{$grey};
+  --primary-green: #{$primary-green};
+}
