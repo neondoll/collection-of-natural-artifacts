@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the pagination component.
+// -----------------------------------------------------------------------------
+
+.pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  color: var(--white, #{$white});
+  cursor: default;
+  user-select: none;
+  
+  &__prev, &__next, &__icon {
+    height: 16px;
+    transition-property: color, outline-color, outline-width, width;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+  }
+  
+  &__prev, &__next {
+    color: var(--grey, #{$grey});
+    cursor: pointer;
+    
+    &:focus-visible {
+      outline: 1px solid var(--green-focus, #{$green-focus});
+      outline-offset: 3px;
+    }
+    
+    &:hover { color: var(--primary-green, #{$primary-green}); }
+    
+    &:active { color: var(--green-active-click, #{$green-active-click}); }
+  }
+  
+  &__prev:hover > &__icon, &__next:hover > &__icon { width: 36px; }
+  
+  &__prev { padding-right: 1px; }
+  
+  &__icon { width: 26px; }
+  
+  &__desc { min-width: 51px; }
+  
+  &__next { padding-left: 1px; }
+}

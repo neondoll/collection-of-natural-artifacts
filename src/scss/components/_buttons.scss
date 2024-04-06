@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn, .btn-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-green, #{$primary-green});
+  cursor: pointer;
+  user-select: none;
+  
+  &:disabled {
+    color: var(--grey, #{$grey});
+    cursor: not-allowed;
+  }
+  
+  &:not(:disabled) {
+    &:focus-visible {
+      outline: 1px solid var(--green-focus, #{$green-focus});
+      outline-offset: 2px;
+    }
+  }
+}
+
+.btn {
+  min-width: 145px;
+  min-height: 45px;
+  padding: 9.5px 27.5px 9.5px 27.5px;
+  border: 1px solid var(--primary-green, #{$primary-green});
+  transition-property: color, background-color, border-color, outline-color, outline-width;
+  transition-timing-function: ease;
+  transition-duration: 200ms;
+  
+  &:disabled { border-color: var(--grey, #{$grey}); }
+  
+  &:not(:disabled) {
+    &:hover {
+      color: var(--background-shade, #{$background-shade});
+      background-color: var(--primary-green, #{$primary-green});
+    }
+    
+    &:active {
+      background-color: var(--green-active-click, #{$green-active-click});
+      border-color: var(--green-active-click, #{$green-active-click});
+    }
+  }
+}
+
+.btn-next {
+  gap: 8px;
+  padding: 0 4px;
+  
+  &, &__text, &__icon {
+    transition-property: color, outline-color, outline-width, width;
+    transition-timing-function: ease;
+    transition-duration: 200ms;
+  }
+  
+  &__text, &__icon { color: inherit; }
+  
+  &__icon {
+    width: 44px;
+    height: 15px;
+  }
+  
+  &:not(:disabled) {
+    &:hover { color: var(--green-hover, #{$green-hover}); }
+    
+    &:active { color: var(--green-active-click, #{$green-active-click}); }
+  }
+  
+  &:not(:disabled):hover > &__icon { width: 54px; }
+}

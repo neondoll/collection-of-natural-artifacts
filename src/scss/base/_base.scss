@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+:root {
+  --background: #{$background};
+  --background-shade: #{$background-shade};
+  --green-active-click: #{$green-active-click};
+  --green-focus: #{$green-focus};
+  --green-hover: #{$green-hover};
+  --grey: #{$grey};
+  --primary-green: #{$primary-green};
+  --white: #{$white};
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 100vh;
+  background-color: var(--background, #{$background});
+}

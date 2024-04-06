@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the log-in component.
+// -----------------------------------------------------------------------------
+
+.log-in {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-green, #{$primary-green});
+  transition-property: color, outline-color, outline-width;
+  transition-timing-function: ease;
+  transition-duration: 200ms;
+  cursor: pointer;
+  
+  &:focus-visible {
+    outline: 1px solid var(--green-focus, #{$green-focus});
+    outline-offset: 1px;
+  }
+  
+  &:hover { color: var(--green-hover, #{$green-hover}); }
+  
+  &:active { color: var(--green-active-click, #{$green-active-click}); }
+}

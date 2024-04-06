@@ -1,0 +1,30 @@
+a, button {
+  color: inherit;
+}
+
+a, button {
+  &:focus-visible {
+    outline-width: 0;
+    outline-color: transparent;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body, button {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+}
+
+button {
+  border: 0;
+}
