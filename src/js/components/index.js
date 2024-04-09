@@ -1,9 +1,10 @@
-import Btn from './Btn.vue';
-import BtnNext from './BtnNext.vue';
+import Input from './Input.vue';
 import Link from './Link.vue';
-import LogIn from './LogIn.vue';
 import Pagination from './Pagination.vue';
+import {
+  Btn, BtnLogIn, BtnNext, BtnSearch,
+} from './buttons';
 
 export {
-  Btn, BtnNext, Link, LogIn, Pagination,
+  Btn, BtnLogIn, BtnNext, BtnSearch, Input, Link, Pagination,
 };

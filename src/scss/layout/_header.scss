@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  position: relative;
+  background-image: image('b26d7fd790a80795819f918a2e149d00.jpeg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  &, &::before, &__navbar {
+    background-color: var(--background, #{$background});
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  &__navbar, &__container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__navbar {
+    padding: 18px 32px 15px;
+  }
+  
+  &__container {
+    padding: 69px 32px 30px;
+  }
+  
+  &__title {
+    color: var(--white, #{$white});
+  }
+  
+  &__btn-next {
+    gap: 9px !important;
+    margin-top: 31px;
+    margin-left: -4px;
+  }
+}

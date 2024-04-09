@@ -13,12 +13,6 @@
   --white: #{$white};
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  height: 100vh;
-  background-color: var(--background, #{$background});
-}
+body, #app { height: 100vh; }
+
+body { background-color: var(--background, #{$background}); }

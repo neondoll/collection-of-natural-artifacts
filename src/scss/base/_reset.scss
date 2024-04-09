@@ -1,6 +1,4 @@
-a, button {
-  color: inherit;
-}
+a, button, input { color: inherit; }
 
 a, button {
   &:focus-visible {
@@ -9,22 +7,14 @@ a, button {
   }
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
-body, button {
-  margin: 0;
-}
+body, button, h1, input, ul { margin: 0; }
 
-button {
-  padding: 0;
-}
+button, input, ul { padding: 0; }
 
-button {
-  background-color: transparent;
-}
+button, input { background-color: transparent; }
 
-button {
-  border: 0;
-}
+button, input { border: 0; }
+
+ul { list-style-type: none; }

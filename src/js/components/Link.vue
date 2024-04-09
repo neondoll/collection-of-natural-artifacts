@@ -1,9 +1,11 @@
 <script setup>
-const props = defineProps({ href: { default: undefined, type: String } });
+const props = defineProps({ class: { default: undefined, type: String }, href: { default: undefined, type: String } });
+
+
 </script>
 
 <template>
-  <a class="link" :href="props.href">
+  <a :class="props.class" class="link" :href="props.href">
     <slot/>
   </a>
 </template>

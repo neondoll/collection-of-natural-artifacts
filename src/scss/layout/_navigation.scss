@@ -1,0 +1,32 @@
+// --------------------------------------------------------------------------------
+// This file contains all styles related to the navigation of the site/application.
+// --------------------------------------------------------------------------------
+
+.navbar {
+  position: relative;
+  
+  &, &__btn-group {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  &__menu {
+    position: absolute;
+    top: 75px;
+    left: 27px;
+  }
+  
+  &__btn-group { margin-left: auto; }
+}
+
+.menu-navbar {
+  &__list {
+    display: flex;
+    gap: 22px;
+  }
+  
+  &__item { white-space: nowrap; }
+  
+  &__link {}
+}

@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--primary-green, #{$primary-green});
   cursor: pointer;
   user-select: none;
   
@@ -27,6 +26,7 @@
   min-width: 145px;
   min-height: 45px;
   padding: 9.5px 27.5px 9.5px 27.5px;
+  color: var(--primary-green, #{$primary-green});
   border: 1px solid var(--primary-green, #{$primary-green});
   transition-property: color, background-color, border-color, outline-color, outline-width;
   transition-timing-function: ease;
@@ -47,6 +47,28 @@
   }
 }
 
+.btn-log-in, .btn-search {
+  color: var(--primary-green, #{$primary-green});
+  transition-property: color, outline-color, outline-width;
+  transition-timing-function: ease;
+  transition-duration: 200ms;
+  cursor: pointer;
+  
+  &:focus-visible {
+    outline: 1px solid var(--green-focus, #{$green-focus});
+    outline-offset: 1px;
+  }
+  
+  &:hover { color: var(--green-hover, #{$green-hover}); }
+  
+  &:active { color: var(--green-active-click, #{$green-active-click}); }
+  
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .btn-next {
   gap: 8px;
   padding: 0 4px;
@@ -57,17 +79,31 @@
     transition-duration: 200ms;
   }
   
+  &--background-shade {
+    color: var(--background-shade, #{$background-shade});
+    
+    &:not(:disabled) {
+      &:hover { color: var(--green-active-click, #{$green-active-click}); }
+      
+      &:active { color: var(--background-shade, #{$background-shade}); }
+    }
+  }
+  
+  &--primary-green {
+    color: var(--primary-green, #{$primary-green});
+    
+    &:not(:disabled) {
+      &:hover { color: var(--green-hover, #{$green-hover}); }
+      
+      &:active { color: var(--green-active-click, #{$green-active-click}); }
+    }
+  }
+  
   &__text, &__icon { color: inherit; }
   
   &__icon {
     width: 44px;
     height: 15px;
-  }
-  
-  &:not(:disabled) {
-    &:hover { color: var(--green-hover, #{$green-hover}); }
-    
-    &:active { color: var(--green-active-click, #{$green-active-click}); }
   }
   
   &:not(:disabled):hover > &__icon { width: 54px; }

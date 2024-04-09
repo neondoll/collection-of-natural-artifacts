@@ -10,3 +10,9 @@ $green-hover: #91ac46;
 $grey: #899d9d;
 $primary-green: #bae249;
 $white: #ffffff;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '../assets/' !default;
